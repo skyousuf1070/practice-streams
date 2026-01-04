@@ -169,5 +169,15 @@ public class IntermediateLevelExercises {
                 .mapToObj(ch -> String.valueOf((char) ch))
                 .reduce("", (a, b) -> b + a);
         System.out.println(reversedString);
+
+        char[] s = {'h', 'e', 'l', 'l', 'o'};
+        String str1 = new String(s);
+        Character[] reversedArray = str1.chars()
+                .mapToObj(ch -> String.valueOf((char) ch))
+                .reduce("", (a, b) -> b + a)
+                .chars()
+                .mapToObj(ch -> (char) ch)
+                .toArray(Character[]::new);
+        System.out.println(Arrays.toString(reversedArray));
     }
 }
